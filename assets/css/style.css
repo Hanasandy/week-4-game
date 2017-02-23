@@ -1,13 +1,45 @@
+body {
+
+	background-image: url("../images/sun_crystal_collector_small.jpg");
+	/*background-size: 100%;*/
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-top: 4% 
+	font-family: 'Averia Serif Libre', cursive;
+}
+body .navbar{
+	font-family: 'Averia Serif Libre', cursive;
+}
+.navbar.navbar-default .navbar-header h1{
+	margin-left: 20px;
+}
+.panel.panel-success {
+	width:75%;	
+	opacity: 0.5;
+}
+
+
+.panel.panel-success p{ 
+	padding: 5px;
+	margin-bottom: 0;
+	font-family: 'Averia Serif Libre', cursive;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+
 .crystals{
-	display;flex;
+	display: inline-flex;
 	justify-content:center;
 
 }
-
+/*.panel-success{
+	background-image:url("../images/09.jpg");
+}*/
 .crystal{
 	width:70px;
     height:70px;
-    background: red;
+    /*background: red;*/
     margin: 10px;
     border-radius: 14px;
 
@@ -17,23 +49,62 @@
     cursor: pointer;
 
 }
+h1 h2 h3 .head{
+	font-family: 'Averia Serif Libre', cursive;
+}
+
+
+/*.red {
+	background: red;
+}
+
+.orange {
+	background: orange;
+}
 .green {
 	background: green;
 }
-
-.red {
-	background: red;
-}
-.yellow {
-	background: yellow;
-}
 .blue {
 	background: blue;
+}*/
+
+.status-crystal-container h3{
+	font-family: 'Averia Serif Libre', cursive;
+	font-size: 28px;
+	color: #008b8b;
+	font-weight:bolder;
 }
-.green:hover, .red:hover, .yellow.hover, .blue:hover{
-	width: 75px;
-	height: 75px;
+
+
+.crystals{
+	margin-top: 10%;
 }
-.cryetal p{
-	opacity: none;
+
+.crystal img{
+	width: 70px;
+	height: 70px;
+	float: left;
 }
+
+.red:hover, .orange:hover, .green:hover, .blue:hover{
+	width: 100px;
+	height: 100px;
+	  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+.crystals p{
+	/*opacity: 0;*/
+    display: none;
+}
+
+/*.footer p{
+	font-family: 'Averia Serif Libre', cursive;
+}
+.footer .container{
+	height: 100px;
+	background-color: #808080;
+    color: white;
+}*/

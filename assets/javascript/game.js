@@ -1,5 +1,5 @@
-var crystal = {
-	win:0,
+var crystal = { //object
+	win:0,  //value
 	lose:0,
 	totalScore:0,
 	crystals: [1, 2, 3, 4],
@@ -13,13 +13,13 @@ var crystal = {
 
 };
 
-// Generated number
+// Generate total score
 crystal.totalScore = crystal.randomNumber(19, 120);
-$(".totalscore").html("TotalScore :" + crystal.totalScore);
+$(".totalscore").html("Score to match :" + crystal.totalScore);
 //console.log(crystal.totalScore);
 
 
-
+// Generate random number for crystals
 function random(){
 	for(var i = 0; i < crystal.crystals.length; i++){
 	crystal.crystals[i] = crystal.randomNumber(1, 12);
@@ -28,24 +28,27 @@ function random(){
 }
 random();
 
+// crystal.crystals.map(function(element.index){
+// 	crystal.crystals[index] = crystal.randomNumber(1, 12);
+// });
 
 
-var esterling = $(".crystal p");
 
+var loopingCrystal = $(".crystal p"); //".crystal" is array
 
 // Looping through the crytal from the DOM
 function crystalRandom(){
-	for(var i = 0;  i < esterling.length; i++){
+	for(var i = 0;  i < loopingCrystal.length; i++){
 
 		// Putting the value to the crystal in the DOM
-		$(esterling[i]).html(crystal.crystals[i]);
+		$(loopingCrystal[i]).html(crystal.crystals[i]);
 	}
 }
 
 crystalRandom();
 
 function reset(){
-	random()
+	random();
 	crystal.totalScore = crystal.randomNumber(19, 120);
 	$(".totalscore").html("TotalScore :" + crystal.totalScore);
 		
@@ -56,36 +59,35 @@ function reset(){
 
 // Add value to the Total Score
 $(".crystal").on("click", function(){
-	// Grabbing any value from the children by clicking the parent
+    // Grabbing any value from the children by clicking the parent
 	var value = $(this).children(this).text();
-
 	// converting the string into real number
 	var number = parseInt(value);
-
 	// Adding it to the total score.
 	crystal.result += number;
 	//console.log(crystal.result);
-	$(".result").html("The result is: " + crystal.result);
+	
+
+    $(".result").html("The result is: " + crystal.result);
 
 
-	if(crystal.totalScore === crystal.result){
-
+	if(crystal.result === crystal.totalScore){
+        
+        $(".winlossMessage").html("You won!");
 		crystal.win++;
-		$('.win').html("You win : " + crystal.win);
+		$('.win').html("Wins: " + crystal.win);
+
 		reset();
-
-
 	}
 
-	else if(crystal.result > crystal.totalScore ){
+	else if(crystal.result > crystal.totalScore){
+		
+		$(".winlossMessage").html("Sorry you lost...");
 		crystal.lose++;
-		$('.lose').html("You lose: " + crystal.lose);
+		$('.lose').html("Losses: " + crystal.lose);
+		
 		reset();
-
 	}
-
-
-
 });
 
 
@@ -95,20 +97,6 @@ $(".crystal").on("click", function(){
 
 
 //console.log(crystal.result);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // A generated number that starts every time the browser finished loaded
