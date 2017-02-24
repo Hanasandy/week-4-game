@@ -4,7 +4,7 @@ body {
 	/*background-size: 100%;*/
 	background-position: center;
 	background-repeat: no-repeat;
-	margin-top: 4% 
+	margin-top: 4%; 
 	font-family: 'Averia Serif Libre', cursive;
 }
 body .navbar{
@@ -17,8 +17,6 @@ body .navbar{
 	width:75%;	
 	opacity: 0.5;
 }
-
-
 .panel.panel-success p{ 
 	padding: 5px;
 	margin-bottom: 0;
@@ -26,66 +24,40 @@ body .navbar{
 	font-weight: bold;
 	font-size: 18px;
 }
-
-
-.crystals{
-	display: inline-flex;
-	justify-content:center;
-
-}
 /*.panel-success{
 	background-image:url("../images/09.jpg");
 }*/
-.crystal{
-	width:70px;
-    height:70px;
-    /*background: red;*/
-    margin: 10px;
-    border-radius: 14px;
 
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-
-}
 h1 h2 h3 .head{
 	font-family: 'Averia Serif Libre', cursive;
 }
-
-
-/*.red {
-	background: red;
-}
-
-.orange {
-	background: orange;
-}
-.green {
-	background: green;
-}
-.blue {
-	background: blue;
-}*/
-
 .status-crystal-container h3{
 	font-family: 'Averia Serif Libre', cursive;
 	font-size: 28px;
 	color: #008b8b;
 	font-weight:bolder;
 }
-
-
 .crystals{
+    display: inline-flex;
+	justify-content:center;
 	margin-top: 10%;
+	/*display: inline-block;*/
 }
-
+.crystal{
+	width:70px;
+    height:70px;
+    margin: 10px;
+    border-radius: 14px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 .crystal img{
 	width: 70px;
 	height: 70px;
 	float: left;
 }
-
 .red:hover, .orange:hover, .green:hover, .blue:hover{
 	width: 100px;
 	height: 100px;

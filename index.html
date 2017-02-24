@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,14 +19,13 @@
         <nav class="navbar navbar-default">
             <div class="">
                 <div class="navbar-header ">
-                    <!-- <button type="button" class="btn btn-info" onclick="setGame();"> Get Crystals! </button> -->
-                    <h1>Crystal Collector!<small>     ~Get your gems~</small></h1>
+                    <h1>Crystal Collector!    <small>~Get your gems~</small></h1>
                 </div>
             </div>
         </nav>
         <div class="container">
             <div class="row">
-                <div class="col-sm-7 text-left explanation">
+                <div class="col-md-7 text-left explanation">
                     <div class = "panel panel-success">
                         <p>You will be given a random number at the start of the game.<br>
                             There are four crystal below. By clicking on a crystal you will add a specific amount of points to your otal score.<br>
@@ -36,22 +36,20 @@
                     </div>
                 </div>
                 <div class="status-crystal-container">
-                    <div class="col-sm-5 status">
-                        <div class="game-srarus">
-                            
-
+                    <div class="col-md-5 status">
+                        <div class="game-status">                            
                               <div class="row">
-                                 <div class="col-sm-7"> 
+                                 <div class="col-md-7"> 
+                                    <h3 class="computerscore">Score to Match: 0</h3>
+                                    <h3 class="result">Your Score: 0</h3>
                                     <h3 class="win"> Wins: 0</h3>
-                                    <h3 class="lose">Losses : 0</h3>
-                                    <h3 class="totalscore">Total Score: 0</h3>
-                                    <h3 class="result">Your Scoe: 0</h3>
+                                    <h3 class="lose">Losses: 0</h3>          
                                  </div>
-                                 <div class="col-sm-5"> 
+                                 <div class="col-md-5"> 
                                     <h3 class="winlossMessage">    </h3>
                                  </div>
                                </div>  
-                        </div>
+                        </div><!-- game-status -->
                         <section class="crystals">
                             <div class="crystal red box"><img src="assets/images/Gems_01_128x128_008.png" alt="crystal1" class=>
                                 <p> Crystal 1</p>
@@ -66,18 +64,15 @@
                                 <p>Crystal 4</p>
                             </div>
                         </section>
-                    </div>
-                </div>
-                <div >
-                    
-                </div>
-            </div>
-        </container>
-    <footer class="footer">
+                    </div><!-- col-md-5 status -->
+                </div><!-- status-crystal-container -->
+            </div><!-- row -->
+        </div><!-- container -->
+    <!-- <footer class="footer">
       <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
+        <p class="text-muted">Heidi Tochigi Game</p>
       </div>
-    </footer>
+    </footer> -->
 <script type="text/javascript" src="./assets/javascript/game.js"></script>
 
 </body>

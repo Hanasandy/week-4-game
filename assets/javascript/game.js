@@ -1,7 +1,7 @@
 var crystal = { //object
 	win:0,  //value
 	lose:0,
-	totalScore:0,
+	computerScore:0,
 	crystals: [1, 2, 3, 4],
 
 	randomNumber:function(first, second){
@@ -14,8 +14,8 @@ var crystal = { //object
 };
 
 // Generate total score
-crystal.totalScore = crystal.randomNumber(19, 120);
-$(".totalscore").html("Score to match :" + crystal.totalScore);
+crystal.computerScore = crystal.randomNumber(19, 120);
+$(".computerscore").html("Score to match: " + crystal.computerScore);
 //console.log(crystal.totalScore);
 
 
@@ -40,7 +40,7 @@ var loopingCrystal = $(".crystal p"); //".crystal" is array
 function crystalRandom(){
 	for(var i = 0;  i < loopingCrystal.length; i++){
 
-		// Putting the value to the crystal in the DOM
+		// Putting the value to the crystal
 		$(loopingCrystal[i]).html(crystal.crystals[i]);
 	}
 }
@@ -49,8 +49,8 @@ crystalRandom();
 
 function reset(){
 	random();
-	crystal.totalScore = crystal.randomNumber(19, 120);
-	$(".totalscore").html("TotalScore :" + crystal.totalScore);
+	crystal.computerScore = crystal.randomNumber(19, 120);
+	$(".computerscore").html("Score to Match: " + crystal.computerScore);
 		
 	crystalRandom();
 
@@ -68,10 +68,10 @@ $(".crystal").on("click", function(){
 	//console.log(crystal.result);
 	
 
-    $(".result").html("The result is: " + crystal.result);
+    $(".result").html("Your Score: " + crystal.result);
 
 
-	if(crystal.result === crystal.totalScore){
+	if(crystal.result === crystal.computerScore){
         
         $(".winlossMessage").html("You won!");
 		crystal.win++;
@@ -80,7 +80,7 @@ $(".crystal").on("click", function(){
 		reset();
 	}
 
-	else if(crystal.result > crystal.totalScore){
+	else if(crystal.result > crystal.computerScore){
 		
 		$(".winlossMessage").html("Sorry you lost...");
 		crystal.lose++;
@@ -90,29 +90,3 @@ $(".crystal").on("click", function(){
 	}
 });
 
-
-
-
-
-
-
-//console.log(crystal.result);
-
-
-// A generated number that starts every time the browser finished loaded
-
-
-// We have 4 crystals each one represent a number and that number is hidden in the DOM
-	// Reveal or add the value number of the crystal every time the user click on it to the total score
-	// everytime we click on a crystal, it's going to add to the total score
-
-// Store the wining points and increment by 1 everytime user wins
-	// every time the user wins, generated a new random number to the total score
-	// Generated a new random number for the crystals every time user click on any crystals
-	// Reset the result to 0
-
-
-// Match the total score with the generated number
-	// If they are equals, then the user wins or put 1 to the wining variables
-	// If it goes over the generated number, then put 1 to the losing points
-	
